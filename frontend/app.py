@@ -3,8 +3,11 @@ import requests
 import pandas as pd
 from datetime import datetime
 import plotly.express as px
+import os
 
-API_URL = "http://127.0.0.1:8000/logs"
+# Fetch backend URL from environment or fallback to local development URL
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+API_URL = f"{BACKEND_URL}/logs"
 
 # Session state initialization
 if 'edit_log_id' not in st.session_state:
