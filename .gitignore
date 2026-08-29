@@ -1,0 +1,8 @@
+.env
+venv/
+__pycache__/
+*.pyc
+smoketracker.db
+
+test.db
+.pytest_cache/
